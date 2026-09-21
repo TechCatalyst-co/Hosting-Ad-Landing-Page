@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import TechCatalystLogo from './TechCatalystLogo';
-import { Mail, Phone, ShieldCheck, X } from 'lucide-react';
+import { Mail, Phone, ShieldCheck } from 'lucide-react';
 
 export const Footer: React.FC = () => {
-  const [activeModal, setActiveModal] = useState<'privacy' | 'terms' | null>(null);
-
   return (
     <footer id="main-footer" className="bg-[#0F172A] text-slate-400 border-t border-slate-800 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,77 +90,27 @@ export const Footer: React.FC = () => {
           </p>
 
           <div className="flex items-center gap-6">
-            <button
-              type="button"
-              onClick={() => setActiveModal('privacy')}
-              className="hover:text-slate-300 transition-colors cursor-pointer"
+            <a
+              href="https://techcatalyst.co/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-slate-300 transition-colors"
             >
               Privacy Policy
-            </button>
+            </a>
             <span className="text-slate-700">•</span>
-            <button
-              type="button"
-              onClick={() => setActiveModal('terms')}
-              className="hover:text-slate-300 transition-colors cursor-pointer"
+            <a
+              href="https://techcatalyst.co/terms-of-service"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-slate-300 transition-colors"
             >
               Terms of Service
-            </button>
+            </a>
           </div>
         </div>
 
       </div>
-
-      {/* Modal for Privacy / Terms */}
-      {activeModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-          <div className="bg-white text-[#0F172A] rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl">
-            <button
-              type="button"
-              onClick={() => setActiveModal(null)}
-              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 rounded-lg"
-              aria-label="Close dialog"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            <h3 className="text-xl font-bold text-[#0F172A] mb-3">
-              {activeModal === 'privacy' ? 'Privacy Policy' : 'Terms of Service'}
-            </h3>
-
-            <div className="text-sm text-slate-600 space-y-3 max-h-80 overflow-y-auto pr-2">
-              {activeModal === 'privacy' ? (
-                <>
-                  <p>
-                    At TechCatalyst, we respect your privacy. All contact information submitted through our intake forms is strictly used to evaluate your website requirements, coordinate your build, and manage your hosting account.
-                  </p>
-                  <p>
-                    We never sell, rent, or trade your personal or business data to third-party advertisers. All lead data routed through LeadHub CRM is encrypted and isolated to your account.
-                  </p>
-                </>
-              ) : (
-                <>
-                  <p>
-                    The Free Website Build offer is provided in conjunction with a minimum 12-month commitment to our Hosting & Management agreement.
-                  </p>
-                  <p>
-                    Site design and development commences upon verification of business credentials and intake review. Routine maintenance, security updates, and daily backups are maintained throughout the active subscription term.
-                  </p>
-                </>
-              )}
-            </div>
-
-            <div className="mt-6 pt-4 border-t border-slate-200 text-right">
-              <button
-                type="button"
-                onClick={() => setActiveModal(null)}
-                className="bg-[#23448D] hover:bg-[#1E50BC] text-white font-bold text-xs uppercase px-5 py-2.5 rounded-lg"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </footer>
   );
 };
