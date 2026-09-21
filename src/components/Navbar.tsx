@@ -63,13 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onClaimClick }) => {
             >
               Hosting Plan
             </a>
-            <a
-              href="#faq"
-              onClick={(e) => handleScrollTo(e, 'faq')}
-              className="hover:text-[#1E50BC] transition-colors"
-            >
-              FAQ
-            </a>
+
           </nav>
 
           {/* Desktop Primary Header CTA */}
@@ -131,13 +125,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onClaimClick }) => {
           >
             Hosting Plan
           </a>
-          <a
-            href="#faq"
-            onClick={(e) => handleScrollTo(e, 'faq')}
-            className="block px-3 py-2.5 rounded-md text-base font-semibold text-[#0F172A] hover:bg-[#F8FAFC] hover:text-[#23448D]"
-          >
-            FAQ
-          </a>
+
           <div className="pt-2 border-t border-[#E2E8F0]">
             <a
               href="#claim-form"

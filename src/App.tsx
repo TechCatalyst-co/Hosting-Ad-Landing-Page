@@ -9,7 +9,6 @@ import HeroSection from './components/HeroSection';
 import TrustLogoBar from './components/TrustLogoBar';
 import FeaturesSection from './components/FeaturesSection';
 import PricingSection from './components/PricingSection';
-import FaqSection from './components/FaqSection';
 import BottomCtaSection from './components/BottomCtaSection';
 import Footer from './components/Footer';
 import SuccessModal from './components/SuccessModal';
@@ -64,8 +63,6 @@ export default function App() {
           onSelectPlan={handlePlanChange}
         />
 
-        {/* 6. FAQ ACCORDION SECTION */}
-        <FaqSection />
 
         {/* 7. FINAL BOTTOM CTA BANNER */}
         <BottomCtaSection />
