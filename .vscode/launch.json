@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node-terminal",
+            "request": "launch",
+            "name": "Start Vite dev server",
+            "command": "npm.cmd run dev",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open app in Chrome",
+            "url": "http://localhost:3000/",
+            "webRoot": "${workspaceFolder}"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Run Hosting Ad landing page",
+            "configurations": [
+                "Start Vite dev server",
+                "Open app in Chrome"
+            ]
+        }
+    ]
+}
