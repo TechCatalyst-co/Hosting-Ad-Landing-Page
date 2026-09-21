@@ -1,0 +1,6 @@
+{
+  "name": "TechCatalyst - Free Website Build Offer",
+  "description": "High-converting landing page for TechCatalyst: Claim a free custom website build with a 12-month hosting and support subscription.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
